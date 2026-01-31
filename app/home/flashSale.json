@@ -1,0 +1,49 @@
+{
+  "flashSale": {
+    "title": "Flash Sale",
+    "schema": "cardProduk",
+    "description": "Produk flash sale, 1 per item_group_id",
+    "layout": {
+      "type": "flex",
+      "direction": "row",
+      "scroll": "horizontal",
+      "container_max_width": "100%",
+      "card_max_width": 120
+    },
+    "source": {
+      "type": "api",
+      "provider": "opensheet",
+      "method": "GET",
+      "url": "https://opensheet.elk.sh/1x2Rtyeyq3WR6yFybA8stGP0mdI2dlKvBz6fhx7FIjhQ/Sheet1"
+    },
+    "selection_rule": {
+      "filter": {
+        "event_tag": "flashsale"
+      },
+      "group_by": "item_group_id",
+      "take_per_group": 1,
+      "priority": [
+        "discount_percentage_desc",
+        "sale_price_asc"
+      ]
+    },
+    "map": {
+      "id": "id",
+      "item_group_id": "item_group_id",
+      "title": "title",
+      "image_link": "image_link",
+      "price": "price",
+      "sale_price": "sale_price",
+      "discount_percentage": "discount_percentage",
+      "quantity_to_sell_on_facebook": {
+        "source": "quantity_to_sell_on_facebook",
+        "transform": "minMax(1, 99)"
+      }
+    },
+    "action": {
+      "type": "open",
+      "url_param": "?itmsid={{item_group_id}}",
+      "push_state": true
+    }
+  }
+}
