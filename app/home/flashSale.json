@@ -32,8 +32,14 @@
       "item_group_id": "item_group_id",
       "title": "title",
       "image_link": "image_link",
-      "price": "price",
-      "sale_price": "sale_price",
+      "price": {
+        "source": "price",
+        "display": "cross_if_sale"
+      },
+      "sale_price": {
+        "source": "sale_price",
+        "display": "primary_if_exists_else_price"
+      },
       "discount_percentage": "discount_percentage",
       "quantity_to_sell_on_facebook": {
         "source": "quantity_to_sell_on_facebook",
