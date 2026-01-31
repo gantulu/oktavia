@@ -35,7 +35,7 @@
         "flex": true,
         "rating": {
           "source": "rating",
-          "format": "float(2)",
+          "format": "divide100_float(2)",
           "icon": "★"
         },
         "sold": {
