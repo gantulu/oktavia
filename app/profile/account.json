@@ -1,116 +1,58 @@
 {
-  "profile": {
-    "title": "Profil",
-    "schema": "pageProfile",
-    "views": {
-      "guest": {
-        "description": "Tampilan sebelum login",
-        "forms": {
-          "loginForm": {
-            "phone": "",
-            "password": "",
-            "rememberMe": false,
-            "forgotPassword": "Lupa Kata Sandi?"
-          },
-          "daftarForm": {
-            "name": "",
-            "phone": "",
-            "password": "",
-            "confirmPassword": "",
-            "referralCode": ""
-          }
-        }
+  "app": {
+    "auth": {
+      "registerSection": {
+        "title": "Daftar Akun",
+        "inputs": [
+          { "id": "regName", "type": "text", "placeholder": "Nama Lengkap" },
+          { "id": "regPhone", "type": "tel", "placeholder": "Nomor Telepon" },
+          { "id": "regPass", "type": "password", "placeholder": "Password" }
+        ],
+        "button": { "text": "Daftar", "action": "handleRegister" },
+        "switchText": "Sudah punya akun?",
+        "switchAction": { "text": "Login", "function": "toggleAuth(true)" }
       },
-      "user": {
-        "description": "Tampilan setelah login",
-        "user": {
-          "userInfo": {
-            "name": "John Doe",
-            "email": "johndoe@example.com",
-            "phone": "08123456789",
-            "address": "Jl. Contoh No. 1, Jakarta",
-            "profilePicture": "https://example.com/avatar.jpg"
-          },
-          "accountMenu": [
-            {
-              "id": 2,
-              "name": "Pesanan Saya",
-              "icon": "fas fa-shopping-bag"
-            },
-            {
-              "id": 3,
-              "name": "Wishlist",
-              "icon": "fas fa-heart"
-            },
-            {
-              "id": 4,
-              "name": "Voucher",
-              "icon": "fas fa-ticket-alt"
-            },
-            {
-              "id": 5,
-              "name": "Pengaturan Akun",
-              "icon": "fas fa-cog"
-            }
-          ],
-          "orderStatus": [
-            {
-              "id": 1,
-              "orderId": "ORD-001",
-              "status": "Menunggu Pembayaran",
-              "productName": "iPhone 15 Pro Max 256GB Titanium",
-              "productImage": "https://example.com/iphone15pro.jpg",
-              "totalPrice": 22999000
-            },
-            {
-              "id": 2,
-              "orderId": "ORD-002",
-              "status": "Dikirim",
-              "productName": "iPad Pro M2 11-inch Wi-Fi 128GB",
-              "productImage": "https://example.com/ipadpro11.jpg",
-              "totalPrice": 14499000
-            }
-          ],
-          "wishlist": [
-            {
-              "id": 1,
-              "item_group_id": "IPHONE15PRO",
-              "title": "iPhone 15 Pro Max 256GB Titanium",
-              "price": 22999000,
-              "sale_price": 22999000,
-              "image_link": "https://example.com/iphone15pro.jpg"
-            },
-            {
-              "id": 2,
-              "item_group_id": "IPADPRO11",
-              "title": "iPad Pro M2 11-inch Wi-Fi 128GB",
-              "price": 14499000,
-              "sale_price": 14499000,
-              "image_link": "https://example.com/ipadpro11.jpg"
-            }
-          ],
-          "voucher": [
-            {
-              "id": 1,
-              "code": "VOUCHER10",
-              "discount": 10,
-              "expiredDate": "2024-12-31",
-              "minimumPurchase": 100000
-            },
-            {
-              "id": 2,
-              "code": "VOUCHER20",
-              "discount": 20,
-              "expiredDate": "2025-01-31",
-              "minimumPurchase": 200000
-            }
-          ]
-        }
+      "loginSection": {
+        "title": "Selamat Datang",
+        "inputs": [
+          { "id": "loginPhone", "type": "tel", "placeholder": "Nomor Telepon" },
+          { "id": "loginPass", "type": "password", "placeholder": "Password" }
+        ],
+        "button": { "text": "Masuk", "action": "handleLogin" },
+        "switchText": "Belum punya akun?",
+        "switchAction": { "text": "Daftar", "function": "toggleAuth(false)" }
       }
     },
-    "script": {
-      "saveUserToLocalStorage": "localStorage.setItem('userProfile', JSON.stringify(profile.views.user.user));",
-      "loadUserFromLocalStorage": "const userProfile = JSON.parse(localStorage.getItem('userProfile'));"
-    }
+    "profile": {
+      "userInfo": {
+        "name": "",
+        "phone": "",
+        "profilePicture": "",
+        "avatarSeed": ""
+      },
+      "accountMenu": [
+        { "id": 1, "name": "Pesanan Saya", "icon": "fas fa-shopping-bag" },
+        { "id": 2, "name": "Wishlist", "icon": "fas fa-heart" },
+        { "id": 3, "name": "Voucher", "icon": "fas fa-ticket-alt" }
+      ],
+      "orderStatus": [],
+      "wishlist": [],
+      "voucher": []
+    },
+    "actions": {
+      "register": "handleRegister",
+      "login": "handleLogin",
+      "logout": "handleLogout",
+      "toggleAuth": "toggleAuth",
+      "renderContent": "renderContent"
+    },
+    "tabs": ["Pesanan Saya", "Wishlist", "Voucher"]
+  },
+  "ui": {
+    "authContainer": { "visible": true },
+    "profileSection": { "visible": false },
+    "menuList": [],
+    "tabTitle": "",
+    "tabContent": ""
   }
 }
