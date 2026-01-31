@@ -1,0 +1,386 @@
+{"main": {
+    "home": {
+      "banner": {
+        "type": "premium",
+        "autoSwipe": true,
+        "interval": 4000,
+        "items": [
+          {
+            "id": "banner-1",
+            "title": "iPhone 15 Pro",
+            "subtitle": "Kekuatan maksimal di genggamanmu",
+            "backgroundColor": "#F5F5F7",
+            "textColor": "#000000",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='7' y='2' width='10' height='20' rx='2'/><circle cx='12' cy='18' r='1'/></svg>"
+          },
+          {
+            "id": "banner-2",
+            "title": "Voucher 10% OFF",
+            "subtitle": "Belanja Apple hemat!",
+            "backgroundColor": "#FEF3C7",
+            "textColor": "#92400E",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2l7 7-7 7-7-7 7-7z'/><line x1='12' y1='9' x2='12' y2='15'/></svg>",
+            "kode_voucher": "APPLE10",
+            "tombol_ambil": true
+          },
+          {
+            "id": "banner-3",
+            "title": "Apple Watch Series 9",
+            "subtitle": "Pantau kesehatan & aktivitasmu",
+            "backgroundColor": "#D1FAE5",
+            "textColor": "#065F46",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='7' y='2' width='10' height='20' rx='3'/><circle cx='12' cy='12' r='3'/></svg>"
+          },
+          {
+            "id": "banner-4",
+            "title": "Voucher Rp100.000",
+            "subtitle": "Potongan langsung untuk semua produk Apple",
+            "backgroundColor": "#EFF6FF",
+            "textColor": "#1E3A8A",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2v20M2 12h20'/></svg>",
+            "kode_voucher": "RP100K",
+            "tombol_ambil": true
+          },
+          {
+            "id": "banner-5",
+            "title": "AirPods Pro 2",
+            "subtitle": "Suara jernih tanpa gangguan",
+            "backgroundColor": "#E0F2FE",
+            "textColor": "#0369A1",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M9 3l2 18h2l2-18'/></svg>"
+          },
+          {
+            "id": "banner-6",
+            "title": "Voucher Bundle 3 Produk",
+            "subtitle": "Beli iPhone + AirPods + Watch hemat total 15%",
+            "backgroundColor": "#FDE68A",
+            "textColor": "#78350F",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='5' width='18' height='14' rx='2'/><line x1='3' y1='12' x2='21' y2='12'/></svg>",
+            "kode_voucher": "BUNDLE15",
+            "tombol_ambil": true
+          },
+          {
+            "id": "banner-7",
+            "title": "MacBook Air M2",
+            "subtitle": "Ringan, cepat, dan stylish",
+            "backgroundColor": "#FEE2E2",
+            "textColor": "#991B1B",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='5' width='18' height='14' rx='2'/><line x1='3' y1='19' x2='21' y2='19'/></svg>"
+          }
+        ]
+      },
+      "quickAction": [
+        {
+          "id": "quick-iphone",
+          "title": "iPhone",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='7' y='2' width='10' height='20' rx='2'/><circle cx='12' cy='18' r='1'/></svg>"
+        },
+        {
+          "id": "quick-iwatch",
+          "title": "iWatch",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='7' y='2' width='10' height='20' rx='3'/><circle cx='12' cy='12' r='3'/></svg>"
+        },
+        {
+          "id": "quick-imac",
+          "title": "iMac",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='2' y='4' width='20' height='14' rx='2'/><line x1='8' y1='20' x2='16' y2='20'/></svg>"
+        },
+        {
+          "id": "quick-ipad",
+          "title": "iPad",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='4' y='2' width='16' height='20' rx='2'/><circle cx='12' cy='19' r='1'/></svg>"
+        },
+        {
+          "id": "quick-airpods",
+          "title": "AirPods",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M9 3l2 18h2l2-18'/></svg>"
+        }
+      ],
+      "flashSale": {
+        "title": "Flash Sale",
+        "schema": "cardProduk",
+        "description": "Produk flash sale, 1 per item_group_id",
+        "layout": {
+          "type": "flex",
+          "direction": "row",
+          "scroll": "horizontal",
+          "container_max_width": "100%",
+          "card_max_width": 120
+        },
+        "source": {
+          "type": "api",
+          "provider": "opensheet",
+          "method": "GET",
+          "url": "https://opensheet.elk.sh/1x2Rtyeyq3WR6yFybA8stGP0mdI2dlKvBz6fhx7FIjhQ/Sheet1"
+        },
+        "selection_rule": {
+          "filter": {
+            "event_tag": "flashsale"
+          },
+          "group_by": "item_group_id",
+          "take_per_group": 1,
+          "priority": [
+            "discount_percentage_desc",
+            "sale_price_asc"
+          ]
+        },
+        "map": {
+          "id": "id",
+          "item_group_id": "item_group_id",
+          "title": "title",
+          "image_link": "image_link",
+          "price": {
+            "source": "price",
+            "display": "cross_if_sale"
+          },
+          "sale_price": {
+            "source": "sale_price",
+            "display": "primary_if_exists_else_price"
+          },
+          "discount_percentage": "discount_percentage",
+          "quantity_to_sell_on_facebook": {
+            "source": "quantity_to_sell_on_facebook",
+            "transform": "minMax(1, 99)"
+          }
+        },
+        "action": {
+          "type": "open",
+          "url_param": "?itmsid={{item_group_id}}",
+          "push_state": true
+        }
+      },
+      "popularProduk": {
+        "title": "Popular Produk",
+        "schema": "cardProduk",
+        "description": "Produk terlaris, 8 produk dengan jumlah sold tertinggi",
+        "layout": {
+          "type": "grid",
+          "columns": 2,
+          "gap": 8,
+          "card_width": "100%",
+          "position": "relative"
+        },
+        "source": {
+          "type": "api",
+          "provider": "opensheet",
+          "method": "GET",
+          "url": "https://opensheet.elk.sh/1x2Rtyeyq3WR6yFybA8stGP0mdI2dlKvBz6fhx7FIjhQ/Sheet1"
+        },
+        "selection_rule": {
+          "filter": {},
+          "take": 8,
+          "priority": [
+            "sold_desc"
+          ]
+        },
+        "map": {
+          "id": "id",
+          "item_group_id": "item_group_id",
+          "title": "title",
+          "image_link": "image_link",
+          "price": {
+            "source": "price",
+            "display": "cross_if_sale"
+          },
+          "sale_price": {
+            "source": "sale_price",
+            "display": "primary_if_exists_else_price"
+          },
+          "discount_percentage": "discount_percentage",
+          "stats": {
+            "flex": true,
+            "rating": {
+              "source": "rating",
+              "format": "divide100_float(2)",
+              "icon": "★"
+            },
+            "sold": {
+              "source": "sold",
+              "format": "thousands_dot_terjual",
+              "icon": "•"
+            }
+          }
+        },
+        "action": {
+          "type": "open",
+          "url_param": "?itmsid={{item_group_id}}",
+          "push_state": true
+        }
+      }
+    },
+    "catalog": {
+      "allProduk": {
+        "title": "All Produk",
+        "schema": "cardProduk",
+        "description": "Semua produk tersedia, 1 per item_group_id",
+        "layout": {
+          "type": "grid",
+          "columns": 2,
+          "gap": 8,
+          "card_width": "100%",
+          "position": "relative",
+          "filter": {
+            "type": "buttons",
+            "source": "category",
+            "display": "category_name",
+            "multiple": false,
+            "style": {
+              "button_size": "sm",
+              "button_color": "gray",
+              "button_active_color": "blue"
+            }
+          }
+        },
+        "source": {
+          "type": "api",
+          "provider": "opensheet",
+          "method": "GET",
+          "url": "https://opensheet.elk.sh/1x2Rtyeyq3WR6yFybA8stGP0mdI2dlKvBz6fhx7FIjhQ/Sheet1"
+        },
+        "map": {
+          "id": "id",
+          "item_group_id": "item_group_id",
+          "title": "title",
+          "image_link": "image_link",
+          "price": {
+            "source": "price",
+            "display": "cross_if_sale"
+          },
+          "sale_price": {
+            "source": "sale_price",
+            "display": "primary_if_exists_else_price"
+          },
+          "discount_percentage": "discount_percentage",
+          "category": "category",
+          "stats": {
+            "flex": true,
+            "rating": {
+              "source": "rating",
+              "format": "divide100_float(2)",
+              "icon": "★"
+            },
+            "sold": {
+              "source": "sold",
+              "format": "thousands_dot_terjual",
+              "icon": "•"
+            }
+          }
+        },
+        "action": {
+          "type": "open",
+          "url_param": "?itmsid={{item_group_id}}",
+          "push_state": true
+        }
+      }
+    },
+    "profile": {
+      "profile": {
+        "auth": {
+          "registerSection": {
+            "title": "Daftar Akun",
+            "inputs": [
+              {
+                "id": "regName",
+                "type": "text",
+                "placeholder": "Nama Lengkap"
+              },
+              {
+                "id": "regPhone",
+                "type": "tel",
+                "placeholder": "Nomor Telepon"
+              },
+              {
+                "id": "regPass",
+                "type": "password",
+                "placeholder": "Password"
+              }
+            ],
+            "button": {
+              "text": "Daftar",
+              "action": "handleRegister"
+            },
+            "switchText": "Sudah punya akun?",
+            "switchAction": {
+              "text": "Login",
+              "function": "toggleAuth(true)"
+            }
+          },
+          "loginSection": {
+            "title": "Selamat Datang",
+            "inputs": [
+              {
+                "id": "loginPhone",
+                "type": "tel",
+                "placeholder": "Nomor Telepon"
+              },
+              {
+                "id": "loginPass",
+                "type": "password",
+                "placeholder": "Password"
+              }
+            ],
+            "button": {
+              "text": "Masuk",
+              "action": "handleLogin"
+            },
+            "switchText": "Belum punya akun?",
+            "switchAction": {
+              "text": "Daftar",
+              "function": "toggleAuth(false)"
+            }
+          }
+        },
+        "profile": {
+          "userInfo": {
+            "name": "",
+            "phone": "",
+            "profilePicture": "",
+            "avatarSeed": ""
+          },
+          "accountMenu": [
+            {
+              "id": 1,
+              "name": "Pesanan Saya",
+              "icon": "fas fa-shopping-bag"
+            },
+            {
+              "id": 2,
+              "name": "Wishlist",
+              "icon": "fas fa-heart"
+            },
+            {
+              "id": 3,
+              "name": "Voucher",
+              "icon": "fas fa-ticket-alt"
+            }
+          ],
+          "orderStatus": [],
+          "wishlist": [],
+          "voucher": []
+        },
+        "actions": {
+          "register": "handleRegister",
+          "login": "handleLogin",
+          "logout": "handleLogout",
+          "toggleAuth": "toggleAuth",
+          "renderContent": "renderContent"
+        },
+        "tabs": [
+          "Pesanan Saya",
+          "Wishlist",
+          "Voucher"
+        ]
+      },
+      "ui": {
+        "authContainer": {
+          "visible": true
+        },
+        "profileSection": {
+          "visible": false
+        },
+        "menuList": [],
+        "tabTitle": "",
+        "tabContent": ""
+      }
+    }
+  }}
