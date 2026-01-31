@@ -1,0 +1,65 @@
+{
+  "allProduk": {
+    "title": "All Produk",
+    "schema": "cardProduk",
+    "description": "Semua produk tersedia, 1 per item_group_id",
+    "layout": {
+      "type": "grid",
+      "columns": 2,
+      "gap": 8,
+      "card_width": "100%",
+      "position": "relative",
+      "filter": {
+        "type": "buttons",
+        "source": "category",
+        "display": "category_name",
+        "multiple": false,
+        "style": {
+          "button_size": "sm",
+          "button_color": "gray",
+          "button_active_color": "blue"
+        }
+      }
+    },
+    "source": {
+      "type": "api",
+      "provider": "opensheet",
+      "method": "GET",
+      "url": "https://opensheet.elk.sh/1x2Rtyeyq3WR6yFybA8stGP0mdI2dlKvBz6fhx7FIjhQ/Sheet1"
+    },
+    "map": {
+      "id": "id",
+      "item_group_id": "item_group_id",
+      "title": "title",
+      "image_link": "image_link",
+      "price": {
+        "source": "price",
+        "display": "cross_if_sale"
+      },
+      "sale_price": {
+        "source": "sale_price",
+        "display": "primary_if_exists_else_price"
+      },
+      "discount_percentage": "discount_percentage",
+      "category": "category",
+      "stats": {
+        "flex": true,
+        "rating": {
+          "source": "rating",
+          "format": "divide100_float(2)",
+          "icon": "★"
+        },
+        "sold": {
+          "source": "sold",
+          "format": "thousands_dot_terjual",
+          "icon": "•"
+        }
+      }
+    },
+    "action": {
+      "type": "open",
+      "url_param": "?itmsid={{item_group_id}}",
+      "push_state": true
+    }
+  }
+}
